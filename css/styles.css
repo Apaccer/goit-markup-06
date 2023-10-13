@@ -157,28 +157,40 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/background-img.jpg);
+    url(../images/background-img-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 188px;
-  padding-bottom: 188px;
-  max-width: 1440px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  max-width: 320px;
   margin: 0 auto;
 }
-.hero-container {
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/background-img-mob-2x.jpg);
+  }
 }
+
 .hero-slogan {
   color: #fff;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
-  max-width: 496px;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
   text-align: center;
+  max-width: 150px;
 }
+
 .hero-btn {
   color: #fff;
   font-size: 16px;
@@ -374,7 +386,8 @@ img {
 }
 
 .portfolio-img {
-  max-width: 100%;
+  max-width: 288px;
+  max-height: 280px;
 }
 
 .portfolio-overlay {
@@ -844,6 +857,38 @@ img {
   .portfolio-item {
     width: calc((100% - 24px) / 2);
   }
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 112px;
+    max-width: 768px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/background-img-tab.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/background-img-tab-2x.jpg);
+    }
+  }
+  .hero-slogan {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+    max-width: 496px;
+  }
+  .portfolio-img {
+    max-width: 356px;
+    max-height: 300px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -907,5 +952,34 @@ img {
 
   .portfolio-overlay-text {
     display: block;
+  }
+  .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    max-width: 1440px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/background-img.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/background-img-desk-2x.jpg);
+    }
+  }
+  .hero-slogan {
+    margin-bottom: 48px;
+  }
+  .portfolio-img {
+    max-width: 360px;
+    max-height: 300px;
   }
 }
